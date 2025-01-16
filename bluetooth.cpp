@@ -3,6 +3,7 @@
 #include "log.hpp"
 #include <string>
 #include <iostream>
+#include <cstring>
 
 unsigned char pitchData[] = "";
 extern bool interrupt_received;
@@ -34,7 +35,7 @@ int Bluetooth::sendNewPitch(int zone, float ballX, float ballY, int speed)
     ret = sprintf((char *)thisPitchData, "%d,%.2f,%.2f,%d", zone, ballX, ballY, speed);
 
     LogInfo(("Pitch Data: " + std::string((char *)thisPitchData)).c_str());
-    write_ctic(localnode(), 3, thisPitchData, 16);
+    write_ctic(localnode(), 3, thisPitchData, strlen((char *)thisPitchData));
     return ret;
 }
 

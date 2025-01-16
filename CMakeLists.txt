@@ -3,10 +3,6 @@ project(ZI_BT_TEST)
 set (CMAKE_CXX_STANDARD 20)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-
-find_package(OpenCV REQUIRED)
-find_package(PkgConfig REQUIRED)
-
 set(SOURCES
     ZI.cpp
     log.cpp
