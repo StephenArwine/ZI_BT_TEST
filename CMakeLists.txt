@@ -8,12 +8,14 @@ set(SOURCES
     log.cpp
     bluetooth.cpp
     btlib.c
+    wifiConfig.cpp
     )
 set(HEADERS
     ZI.hpp
     log.hpp
     bluetooth.hpp
     btlib.h
+    wifiConfig.hpp
     )
 
 add_executable(ZI_BT_TEST ${SOURCES} ${HEADERS})
