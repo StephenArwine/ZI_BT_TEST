@@ -1,0 +1,12 @@
+[Unit]
+Description= zonedIn service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/zonedin/ZI/build/ZI -r -d
+User=zonedin
+WorkingDirectory=/home/zonedin/ZI/
+
+[Install]
+WantedBy=multi-user.target
